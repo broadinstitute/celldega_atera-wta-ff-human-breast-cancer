@@ -1,0 +1,101 @@
+{
+  "technology": "Xenium",
+  "segmentation_approach": [
+    "default"
+  ],
+  "max_pyramid_zoom": 17,
+  "tile_size": 250,
+  "image_info": [
+    {
+      "name": "dapi",
+      "button_name": "DAPI",
+      "color": [
+        0,
+        0,
+        255
+      ]
+    },
+    {
+      "name": "bound",
+      "button_name": "BOUND",
+      "color": [
+        0,
+        255,
+        0
+      ]
+    },
+    {
+      "name": "rna",
+      "button_name": "RNA",
+      "color": [
+        255,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "prot",
+      "button_name": "PROT",
+      "color": [
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "image_format": ".webp",
+  "use_int_index": true,
+  "use_row_groups": false,
+  "image_scaling": {
+    "source_image": "morphology_2d/",
+    "channels": {
+      "dapi": {
+        "method": "lut_max",
+        "lut_max": 4321.0,
+        "display_max_factor": 5.0,
+        "display_max": 21605.0
+      },
+      "bound": {
+        "method": "percentile_99.9",
+        "lut_max": 8914.0,
+        "display_max_factor": 5.0,
+        "display_max": 44570.0
+      },
+      "rna": {
+        "method": "percentile_99.9",
+        "lut_max": 11701.0,
+        "display_max_factor": 5.0,
+        "display_max": 58505.0
+      },
+      "prot": {
+        "method": "percentile_99.9",
+        "lut_max": 9265.0,
+        "display_max_factor": 5.0,
+        "display_max": 46325.0
+      }
+    }
+  },
+  "microns_per_pixel": 0.21249222,
+  "aligned_he": {
+    "name": "h_and_e",
+    "button_name": "H&E",
+    "image_format": ".webp",
+    "alignment": [
+      [
+        0.0023853516130283455,
+        1.2890134780879539,
+        1070.2031252227916
+      ],
+      [
+        -1.2890134780879539,
+        0.0023853516130283455,
+        40380.985237337765
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}
